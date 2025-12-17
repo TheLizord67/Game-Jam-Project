@@ -7,7 +7,7 @@ public class UIButton : MonoBehaviour
 {
     public List<AudioSource> sourcesOn;
     public Animator animator;
-
+    public float transitionTime = 1f;
     public void LoadScene(string scene)
     {
         StartCoroutine(sceneTransition(scene));
@@ -34,7 +34,7 @@ public class UIButton : MonoBehaviour
     private IEnumerator sceneTransition(string scene)
     {
         animator.SetBool("sceneTransitionIn", true);
-        yield return new WaitForSeconds(3.1f);
+        yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(scene);
         Debug.Log("lock in");
     }
