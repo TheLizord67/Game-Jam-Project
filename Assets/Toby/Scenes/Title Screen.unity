@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 1171661062}
   - component: {fileID: 1171661061}
   - component: {fileID: 1171661060}
+  - component: {fileID: 1171661063}
   m_Layer: 5
   m_Name: Song Selection
   m_TagString: Untagged
@@ -733,16 +734,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659822949}
-        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 1171661063}
+        m_TargetAssemblyTypeName: UIButton, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Song Selection Menu
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1171661058
@@ -872,6 +873,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1171661063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171661055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aed453be6be8cf4f915d9ae7f6259af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourcesOn: []
+  animator: {fileID: 1659822950}
 --- !u!1 &1178558292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,7 +2019,6 @@ GameObject:
   - component: {fileID: 1659822948}
   - component: {fileID: 1659822947}
   - component: {fileID: 1659822950}
-  - component: {fileID: 1659822949}
   m_Layer: 5
   m_Name: Transition Image
   m_TagString: Untagged
@@ -2069,19 +2083,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659822945}
   m_CullTransparentMesh: 1
---- !u!114 &1659822949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659822945}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f05180e75ce648c4a89871c91fa00835, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1659822950}
 --- !u!95 &1659822950
 Animator:
   serializedVersion: 7
