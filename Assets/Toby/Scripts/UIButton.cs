@@ -5,19 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class UIButton : MonoBehaviour
 {
-    public List<AudioSource> sourcesOn;
-    public Animator animator;
-    public float transitionTime = 1f;
+    [SerializeField] private List<AudioSource> sourcesOn;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float transitionTime = 1f;
     public void LoadScene(string scene)
     {
         StartCoroutine(sceneTransition(scene));
-
-
     }
     public void LoadSceneWithNoTransition(string scene)
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(scene);
+    }
+    public void ObjectTransitionIn(Animator animators)
+    {
+        StartCoroutine(objectTransitionIn(animators));
+    }
+    public void ObjectTransitionOut(Animator animators)
+    {
+        StartCoroutine(objectTransitionOn(animators));
     }
     public void Quit()
     {
@@ -38,5 +44,15 @@ public class UIButton : MonoBehaviour
         SceneManager.LoadScene(scene);
         Debug.Log("lock in");
     }
+    private IEnumerator objectTransitionIn(Animator animators)
+    {
+        animators.SetBool("sceneTransitionIn", true);
+        yield return new WaitForSeconds(transitionTime);
+    }
 
+    private IEnumerator objectTransitionOn(Animator animators)
+    {
+        animators.SetBool("sceneTransitionIn", false);
+        yield return new WaitForSeconds(transitionTime);
+    }
 }
