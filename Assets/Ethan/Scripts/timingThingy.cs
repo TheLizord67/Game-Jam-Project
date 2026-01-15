@@ -8,6 +8,7 @@ public class timingThingy : MonoBehaviour
     public GameObject outer;
     public GameObject inner;
 
+    private Vector3 dissapearSize = new Vector3(0.8f, 0.8f, t);
     private float min = 0.8f;
     private float max = 1.5f;
 
@@ -25,15 +26,9 @@ public class timingThingy : MonoBehaviour
         {
             shrinker.gameObject.transform.localScale = new Vector3(Mathf.Lerp(max, min, t), Mathf.Lerp(max, min, t), 0);
             t += speed * Time.deltaTime;
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("beat"))
-        {
-            if (collision.gameObject.name == "Outer Circle")
+            if (shrinker.gameObject.transform.localScale == dissapearSize)
             {
-
+                Destroy(this.gameObject);
             }
         }
     }
