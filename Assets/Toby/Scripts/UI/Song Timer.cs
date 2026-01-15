@@ -14,7 +14,7 @@ public class SongTimer : MonoBehaviour
     [SerializeField] List<bool> whatToSwitch;
     [SerializeField] GameObject guitarObject;
     [SerializeField] GameObject drumObject;
-
+    [SerializeField] GameObject endScreen;
     [ContextMenu("SongLength")]
     public void SongLength()
     {
@@ -32,6 +32,11 @@ public class SongTimer : MonoBehaviour
         timeSlider.value = songLength;
         foreach (var t in changeTimes)
         {
+            if (changeTimes.Count == 0)
+            {
+                OpenEndScreen();
+                break;
+            }
             if (songLength > t)
             {
                 int index = changeTimes.IndexOf(t);
@@ -55,6 +60,10 @@ public class SongTimer : MonoBehaviour
         }
     }
 
+    public void OpenEndScreen()
+    {
+        endScreen.SetActive(true);
+    }
     public void SwitchToGuitar()
     {
         guitarObject.SetActive(true);
