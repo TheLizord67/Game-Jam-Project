@@ -4,7 +4,6 @@ using System.Collections;
 public class mouseFollow : MonoBehaviour
 {
     private Vector3 mousePosition;
-    private bool yesIndeed = true;
 
     void Start()
     {
@@ -14,11 +13,15 @@ public class mouseFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("yuhh");
-            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            this.GetComponentInParent<Transform>().position = mousePosition;
-        }
+        Vector3 mousePos = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        mousePos.z = 0;
+        transform.position = mousePos;
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Debug.Log("yuhh");
+        //    mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //    this.GetComponentInParent<Transform>().position = mousePosition;
+        //}
     }
 }

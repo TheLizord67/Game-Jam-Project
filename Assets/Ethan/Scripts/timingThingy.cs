@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class timingThingy : MonoBehaviour
@@ -9,7 +10,7 @@ public class timingThingy : MonoBehaviour
     public GameObject inner;
 
     private Vector3 dissapearSize = new Vector3(0.8f, 0.8f, t);
-    private float min = 0.8f;
+    private float min = 0.45f;
     private float max = 1.5f;
 
     static float t = 0.0f;
@@ -28,6 +29,30 @@ public class timingThingy : MonoBehaviour
             t += speed * Time.deltaTime;
             if (shrinker.gameObject.transform.localScale == dissapearSize)
             {
+                Destroy(this.gameObject);
+            }
+        }
+    }
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {   //template
+                //if (shrinker.transform.localScale == )
+                //{
+                //    /*
+                //     * Scores are the number's listed and below before next score
+                //        starts at 1.5, shrinks down to 0.45
+                //        >1.1 = Oops!
+                //        1.1 = Yeah!
+                //        .8 = Perfect!
+                //        .6 = Good!
+                //        .45< = Oops!
+                //    */
+                //}
+                Debug.Log("FUCK YA LIFE BING BONG");
+                shrinker.gameObject.transform.localScale.Set(1.5f, 1.5f, t);
                 Destroy(this.gameObject);
             }
         }
