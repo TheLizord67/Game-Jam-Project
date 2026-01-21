@@ -7,7 +7,9 @@ using UnityEngine.UI;
 
 public class SongTimer : MonoBehaviour
 {
+    [SerializeField] Leaderboard highScore;
     [SerializeField] AudioSource songPlayer;
+    [SerializeField] Songs currentSong;
     [SerializeField] float songLength;
     [SerializeField] Slider timeSlider;
     [SerializeField] List<float> changeTimes;
@@ -23,20 +25,21 @@ public class SongTimer : MonoBehaviour
     void Start()
     { 
         timeSlider.maxValue = songPlayer.clip.length;
+        highScore.currentSong = currentSong;
     }
 
     // Update is called once per frame
     void Update()
     {
-        songLength = songPlayer.time;
+        //songLength = songPlayer.time;
         timeSlider.value = songLength;
+        if (songLength == songPlayer.clip.length)
+        {
+             highScore.justPlayedSong = true;
+            OpenEndScreen();
+        }
         foreach (var t in changeTimes)
         {
-            if (changeTimes.Count == 0)
-            {
-                OpenEndScreen();
-                break;
-            }
             if (songLength > t)
             {
                 int index = changeTimes.IndexOf(t);

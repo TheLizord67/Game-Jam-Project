@@ -5,49 +5,56 @@ using NUnit.Framework;
 using System.Collections.Generic;
 public class Leaderboard : MonoBehaviour
 {
-    public Songs currentSong;
-    public TMP_InputField nameInput;
-    public string nameText;
-    public int currentHighscore;
-    public List<TextMeshProUGUI> namesText;
-    public List<TextMeshProUGUI> scoresText;
-
+    [SerializeField] public Songs currentSong;
+    [SerializeField] public TMP_InputField nameInput;
+    [SerializeField] public GameObject input;
+    [SerializeField] public string nameText;
+    [SerializeField] public int currentHighscore;
+    [SerializeField] public List<TextMeshProUGUI> namesText;
+    [SerializeField] public List<TextMeshProUGUI> scoresText;
+    [SerializeField] public bool justPlayedSong = false;
+    [SerializeField] public bool submittedName = false;
     void Start()
     {
-        foreach (var score in currentSong.leaderboard.scores)
+        if (justPlayedSong == true)
         {
-            if (Score.score > score)
+            foreach (var score in currentSong.leaderboard.scores)
             {
-                SubmitName();
+                if (Score.score > score)
+                {
+                    SubmitName();
+                    return;
+                }
+                else
+                {
+                    Debug.Log("Score not high enough for this leaderboard spot");
+                }
             }
-            else
-            {
-                Debug.Log("Score not high enough for leaderboard");
-                SetLeaderboard();
-                break;
-            }
+        }
+        else
+        {
+            SetLeaderboard();
         }
     }
 
     public void SubmitName()
     {
-        nameText = nameInput.text; 
+        input.SetActive(true);
         currentHighscore = Score.score;
-        foreach (var score in currentSong.leaderboard.scores)
-        {
-            if (currentHighscore > score)
-            {
-                currentSong.leaderboard.scores.Insert(currentSong.leaderboard.scores.IndexOf(score), currentHighscore);
-                currentSong.leaderboard.scores.Remove(score);
-                currentSong.leaderboard.names.Insert(currentSong.leaderboard.scores.IndexOf(score), nameText);
-                currentSong.leaderboard.names.RemoveAt(currentSong.leaderboard.scores.IndexOf(score)+1);
-            }
-        }
-        SetLeaderboard();
+    }
+    public void NameTrue()
+    {
+        submittedName = true;
     }
     // Update is called once per frame
     public void SetLeaderboard()
     {
+        submittedName = false;
+        if (currentSong.leaderboard.names.Count > 10)
+        {
+            currentSong.leaderboard.names.Remove(currentSong.leaderboard.names[10]);
+            currentSong.leaderboard.scores.Remove(currentSong.leaderboard.scores[10]);
+        }
         for (int i = 0; i < currentSong.leaderboard.names.Count && i < namesText.Count; i++)
         {
             namesText[i].text = currentSong.leaderboard.names[i];
@@ -56,9 +63,30 @@ public class Leaderboard : MonoBehaviour
         {
             scoresText[i].text = currentSong.leaderboard.scores[i].ToString();
         }
+
     }
     void Update()
     {
-        
+        if (submittedName == true)
+        {
+            nameText = nameInput.text;
+            foreach (var score in currentSong.leaderboard.scores)
+            {
+                if (currentHighscore > score)
+                {
+                    currentSong.leaderboard.scores.Insert(currentSong.leaderboard.scores.IndexOf(score), currentHighscore);
+                    currentSong.leaderboard.names.Insert(currentSong.leaderboard.scores.IndexOf(score) - 1, nameText);
+                    submittedName = false;
+                    SetLeaderboard();
+                    return;
+                }
+                else
+                {
+                    Debug.Log("Not there");
+                }
+            }
+            submittedName = false;
+            SetLeaderboard();
+        }
     }
 }

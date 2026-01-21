@@ -6,6 +6,13 @@ public class Score : MonoBehaviour
 {
     [SerializeField] public static int score;
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    [ContextMenu("+10 Score")]
+    public void AddScore10()
+    {
+        score += 10;
+        Debug.Log($"Score increased by 10. New score: {score}");
+    }
     void Start()
     {
         score = 0;

@@ -9,6 +9,7 @@ public class Songs : ScriptableObject
     public string name;
     public AudioClip music;
     public Leaderboard leaderboard;
+    [System.Serializable]
     public struct Leaderboard
     {
         public List<string> names;
