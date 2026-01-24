@@ -1839,7 +1839,6 @@ GameObject:
   - component: {fileID: 316163154}
   - component: {fileID: 316163153}
   - component: {fileID: 316163152}
-  - component: {fileID: 316163151}
   - component: {fileID: 316163150}
   - component: {fileID: 316163149}
   - component: {fileID: 316163148}
@@ -1868,8 +1867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1044.94, y: 0}
-  m_SizeDelta: {x: 530.3185, y: 278.9696}
+  m_AnchoredPosition: {x: -1052.631, y: -44}
+  m_SizeDelta: {x: 459.5804, y: 386.1828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &316163147
 AudioSource:
@@ -2027,75 +2026,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &316163151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 316163145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 316163149}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AnimationPlayBool
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 316163149}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AudioPlay
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 316163149}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AnimationStopBool
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 316163149}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AudioStop
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &316163152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2416,6 +2346,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365380428}
+  m_CullTransparentMesh: 1
+--- !u!1 &368801684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 368801685}
+  - component: {fileID: 368801687}
+  - component: {fileID: 368801686}
+  m_Layer: 5
+  m_Name: Song 2 Vinyl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &368801685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368801684}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 815346111}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 228, y: -43}
+  m_SizeDelta: {x: 357.2661, y: 353.527}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &368801686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368801684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2a06e1578c4845449b475b883990ab28, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &368801687
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368801684}
   m_CullTransparentMesh: 1
 --- !u!1 &378705434
 GameObject:
@@ -3123,6 +3128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSong: {fileID: 11400000, guid: 47dac75d6aae5f84790dfed2f6affa62, type: 2}
   nameInput: {fileID: 0}
+  input: {fileID: 0}
   nameText: 
   currentHighscore: 0
   namesText:
@@ -3148,6 +3154,7 @@ MonoBehaviour:
   - {fileID: 1054315882}
   - {fileID: 602271636}
   justPlayedSong: 0
+  submittedName: 0
 --- !u!114 &478361025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5396,8 +5403,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1614007294}
-  - {fileID: 1918973431}
+  - {fileID: 840805124}
+  - {fileID: 368801685}
+  - {fileID: 1080730624}
   - {fileID: 316163146}
+  - {fileID: 1918973431}
   - {fileID: 1080269334}
   - {fileID: 2018835381}
   m_Father: {fileID: 1158110579}
@@ -5696,6 +5706,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835088939}
   m_CullTransparentMesh: 1
+--- !u!1 &840805123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 840805124}
+  - component: {fileID: 840805126}
+  - component: {fileID: 840805125}
+  m_Layer: 5
+  m_Name: Song 1 Vinyl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &840805124
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840805123}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 815346111}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -830, y: -43}
+  m_SizeDelta: {x: 357.2661, y: 353.527}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &840805125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840805123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2a06e1578c4845449b475b883990ab28, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &840805126
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840805123}
+  m_CullTransparentMesh: 1
 --- !u!1 &845543751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5752,6 +5837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSong: {fileID: 11400000, guid: 60afa612cf94cd844912f3fb73f9e85b, type: 2}
   nameInput: {fileID: 0}
+  input: {fileID: 0}
   nameText: 
   currentHighscore: 0
   namesText:
@@ -5777,6 +5863,7 @@ MonoBehaviour:
   - {fileID: 585784818}
   - {fileID: 1162038114}
   justPlayedSong: 0
+  submittedName: 0
 --- !u!114 &845543754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6453,7 +6540,6 @@ GameObject:
   - component: {fileID: 1080269342}
   - component: {fileID: 1080269341}
   - component: {fileID: 1080269340}
-  - component: {fileID: 1080269339}
   - component: {fileID: 1080269338}
   - component: {fileID: 1080269337}
   - component: {fileID: 1080269336}
@@ -6482,8 +6568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -514, y: -535.08997}
-  m_SizeDelta: {x: 531.57, y: 278.97}
+  m_AnchoredPosition: {x: -504.07013, y: -566}
+  m_SizeDelta: {x: 465.7103, y: 377.5033}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1080269335
 AudioSource:
@@ -6641,75 +6727,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1080269339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080269333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1080269337}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AnimationPlayBool
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1080269337}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AudioPlay
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1080269337}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AnimationStopBool
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1080269337}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AudioStop
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1080269340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6791,6 +6808,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080269333}
+  m_CullTransparentMesh: 1
+--- !u!1 &1080730623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080730624}
+  - component: {fileID: 1080730626}
+  - component: {fileID: 1080730625}
+  m_Layer: 5
+  m_Name: Song 3 Vinyl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1080730624
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080730623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 815346111}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -266, y: -566}
+  m_SizeDelta: {x: 357.2661, y: 353.527}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1080730625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080730623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2a06e1578c4845449b475b883990ab28, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1080730626
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080730623}
   m_CullTransparentMesh: 1
 --- !u!1 &1096405589
 GameObject:
@@ -10798,7 +10890,6 @@ GameObject:
   - component: {fileID: 1918973439}
   - component: {fileID: 1918973438}
   - component: {fileID: 1918973437}
-  - component: {fileID: 1918973436}
   - component: {fileID: 1918973435}
   - component: {fileID: 1918973434}
   - component: {fileID: 1918973433}
@@ -10827,8 +10918,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 532.82, y: 278.97}
+  m_AnchoredPosition: {x: 1.8083, y: -43}
+  m_SizeDelta: {x: 457.2033, y: 382.0349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1918973432
 AudioSource:
@@ -10986,75 +11077,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1918973436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918973430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1918973434}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AnimationPlayBool
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1918973434}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AudioPlay
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1918973434}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AnimationStopBool
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1918973434}
-          m_TargetAssemblyTypeName: OnHover, Assembly-CSharp
-          m_MethodName: AudioStop
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1918973437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11661,7 +11683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1190, y: -719}
+  m_AnchoredPosition: {x: -1233, y: -722}
   m_SizeDelta: {x: 359.2347, y: 88.8432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2018835382
@@ -12444,6 +12466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSong: {fileID: 11400000, guid: 71cfad0aa0429ee4d8883c2a804b02fc, type: 2}
   nameInput: {fileID: 0}
+  input: {fileID: 0}
   nameText: 
   currentHighscore: 0
   namesText:
@@ -12469,6 +12492,7 @@ MonoBehaviour:
   - {fileID: 5837413465891532673}
   - {fileID: 5837413465891532672}
   justPlayedSong: 0
+  submittedName: 0
 --- !u!114 &5837413465891532672 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 288172201438430055, guid: eb104d70a9f15e546ba1c595c9c5fe1b, type: 3}

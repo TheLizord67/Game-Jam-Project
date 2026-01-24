@@ -5,4 +5,5 @@ using UnityEngine;
 public struct SaveData
 {
     public List<Songs> songs;
+    public int difficulty;
 }
