@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: Song 1
   m_EditorClassIdentifier: 
   name: Song 1
-  music: {fileID: 8300000, guid: 3fd4c8f736f2a1f468ba6926cc571213, type: 3}
+  music: {fileID: 8300000, guid: 594625eb0ef813e489e9a5a2b7a1cfb2, type: 3}
   leaderboard:
     names:
-    - Eee
-    - wow
     - AAA
     - AAA
     - AAA
@@ -26,4 +24,6 @@ MonoBehaviour:
     - AAA
     - AAA
     - AAA
-    scores: 3c0000001e0000000000000000000000000000000000000000000000000000000000000000000000
+    - AAA
+    - AAA
+    scores: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

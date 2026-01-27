@@ -12,9 +12,10 @@ public class UIButton : MonoBehaviour
     {
         StartCoroutine(sceneTransition(scene));
     }
-    public void LoadSceneWithNoTransition(string scene)
+    public IEnumerator sceneTransition(string scene)
     {
         Time.timeScale = 1;
+        yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(scene);
     }
     public void ObjectTransitionIn(Animator animators)
@@ -37,13 +38,6 @@ public class UIButton : MonoBehaviour
         }
         audioSource.Play();
     }
-    private IEnumerator sceneTransition(string scene)
-    {
-        animator.SetBool("sceneTransitionIn", true);
-        yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(scene);
-        Debug.Log("lock in");
-    }
     private IEnumerator objectTransitionIn(Animator animators)
     {
         animators.SetBool("sceneTransitionIn", true);
@@ -54,5 +48,18 @@ public class UIButton : MonoBehaviour
     {
         animators.SetBool("sceneTransitionIn", false);
         yield return new WaitForSeconds(transitionTime);
+    }
+
+    public void Easy()
+    {
+       Score.difficulty = 1f;
+    }
+    public void Normal()
+    {
+        Score.difficulty = 1.5f;
+    }
+    public void Hard()
+    {
+        Score.difficulty = 2f;
     }
 }

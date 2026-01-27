@@ -5,6 +5,8 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     [SerializeField] public static int score;
+    [SerializeField] public static float difficulty;
+    [SerializeField] public static string difficultyName;
     [SerializeField] private TextMeshProUGUI scoreText;
 
     [ContextMenu("+10 Score")]

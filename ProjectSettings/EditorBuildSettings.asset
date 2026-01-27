@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Toby/Scenes/Title Screen.unity
     guid: c48028bebc55b914688737c6e42fe595
   - enabled: 1
+    path: Assets/Toby/Scenes/Progress Scene.unity
+    guid: 80690f5efad3f7545901ebcdb34a7f07
+  - enabled: 0
     path: Assets/Toby/Scenes/Song Selection Menu.unity
     guid: a88d74cf94f98a34ca399ca13f247926
-  - enabled: 1
+  - enabled: 0
     path: Assets/Toby/Scenes/Settings.unity
     guid: 4ce3414209ce1f942826c738951d8d05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Toby/Scenes/Leaderboard.unity
     guid: ac400ca27d48d034eb3c0a630c2234be
   m_configObjects:

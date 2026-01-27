@@ -31,7 +31,7 @@ public class SongTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //songLength = songPlayer.time;
+        songLength = songPlayer.time;
         timeSlider.value = songLength;
         if (songLength == songPlayer.clip.length)
         {
