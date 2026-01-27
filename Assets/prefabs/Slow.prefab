@@ -109,8 +109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0034942627, y: -34.546997}
-  m_SizeDelta: {x: -19.8945, y: -8.9039}
+  m_AnchoredPosition: {x: -0.7962036, y: -39}
+  m_SizeDelta: {x: -18.2955, y: 0.0025024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4032973493485803300
 CanvasRenderer:
@@ -207,7 +207,6 @@ MonoBehaviour:
   startCooldown: 0
   slowDuration: 10
   slowDurationTimer: 10
-  slowBar: {fileID: 0}
   slowFill: {fileID: 1466496904842195632}
   cooldownColor: {r: 1, g: 0.9884413, b: 0.6745283, a: 1}
   ready: {r: 0.3063813, g: 0.8018868, b: 0.36407265, a: 1}

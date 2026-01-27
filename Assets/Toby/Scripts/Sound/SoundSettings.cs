@@ -47,6 +47,10 @@ public class SoundSettings : MonoBehaviour
         {
             soundImage.sprite = soundImages[3];
         }
+        else
+        {
+            Debug.Log("No image");
+        }
     }
     public void SetVolumeFromSlider()
     {

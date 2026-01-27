@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class TimeSlow : MonoBehaviour
     [SerializeField] private float slowDurationTimer;
 
     [SerializeField] private Image slowFill;
+    [SerializeField] private float slowFillAmount;
     [SerializeField] public Color cooldownColor;
     [SerializeField] public Color ready;
     [SerializeField] public Color reload;
@@ -25,6 +27,7 @@ public class TimeSlow : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        slowFillAmount =
         slowCooldownTimer = slowCooldown;
         slowDurationTimer = slowDuration;
     }
@@ -42,7 +45,7 @@ public class TimeSlow : MonoBehaviour
         {
             slowFill.color = cooldownColor;
             slowCooldownTimer -= Time.deltaTime;
-            slowFill.fillAmount = slowCooldownTimer;
+            slowFill.fillAmount -= 0.1f;
         }
         
         else if (slowCooldownTimer <= 0)
@@ -58,7 +61,7 @@ public class TimeSlow : MonoBehaviour
                     normalTime = 1;
                 }
                 slowDurationTimer -= normalTime;
-                slowFill.fillAmount = slowDurationTimer;
+                slowFill.fillAmount -= 0.1f;
             }
 
             if (Input.GetKey(slowKey) == false)
@@ -80,7 +83,7 @@ public class TimeSlow : MonoBehaviour
         {
             slowFill.color = reload;
             slowCooldownTimer += Time.deltaTime;
-            slowFill.fillAmount = slowCooldownTimer;
+            slowFill.fillAmount -= 0.1f * (Time.deltaTime / slowCooldown);
             if (slowCooldownTimer >= slowCooldown)
             {
                 startCooldown = true;
