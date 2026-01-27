@@ -27,7 +27,7 @@ public class VinylSpin : MonoBehaviour
     {
         if (isTransition == false)
         {
-            vinylTransform.Rotate(Vector3.forward * spinSpeed * Time.deltaTime);
+            vinylTransform.Rotate(Vector3.back * spinSpeed * Time.deltaTime);
         }
         if (isTransition == true)
         {
@@ -35,13 +35,13 @@ public class VinylSpin : MonoBehaviour
             { 
                 transitionTime -= Time.deltaTime;
                 spinSpeed += 20;
-                vinylTransform.Rotate(Vector3.forward * spinSpeed * Time.deltaTime);
+                vinylTransform.Rotate(Vector3.back * spinSpeed * Time.deltaTime);
             }
             if (transitionTime <= 0f)
             {
                 vinylAnimator.SetBool("isTransition", true);
                 turnOffTime -= Time.deltaTime;
-                vinylTransform.Rotate(Vector3.forward * spinSpeed * Time.deltaTime);
+                vinylTransform.Rotate(Vector3.back * spinSpeed * Time.deltaTime);
                 if (turnOffTime <= 0f)
                 {
                     foreach (GameObject obj in toTurnOff)
