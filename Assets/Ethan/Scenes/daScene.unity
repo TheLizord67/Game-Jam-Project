@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4185015934312363960, guid: 1525965c4cbe40c4e9f832da11afa4de, type: 3}
+  targetFPS: 60
 --- !u!1 &1659825581
 GameObject:
   m_ObjectHideFlags: 0
