@@ -7,6 +7,7 @@ public class devSpawnBeat : MonoBehaviour
 
     void Awake()
     {
+        Score.difficulty = .75f;
         // VSync must be disabled for targetFrameRate to work
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = targetFPS;

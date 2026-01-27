@@ -19,10 +19,5 @@ public class shrinker : MonoBehaviour
     {
         this.gameObject.transform.localScale = new Vector3(Mathf.Lerp(max, min, t), Mathf.Lerp(max, min, t), 0);
         t += Score.difficulty * Time.deltaTime;
-        if (this.gameObject.transform.localScale == new Vector3(0.6f, 0.6f, 0))
-        {
-            t = 0f;
-            Destroy(parentBeat.gameObject);
-        }
     }
 }

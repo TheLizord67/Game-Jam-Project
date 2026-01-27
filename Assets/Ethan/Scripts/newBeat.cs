@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class newBeat : MonoBehaviour
 {
@@ -30,15 +30,22 @@ public class newBeat : MonoBehaviour
             wordScore = "Perfect!";
             tempScore = 3;
         }
-        if (shrinker.transform.localScale.x <= .76f)
+        if (shrinker.transform.localScale.x <= .86f)
         {
             wordScore = "Yeah!";
             tempScore = 2;
         }
-        if (shrinker.transform.localScale.x <= .6f)
+        if (shrinker.transform.localScale.x <= .7f)
         {
             wordScore = "Oops...";
             tempScore = 0;
+        }
+
+        if (this.gameObject.transform.localScale == new Vector3(0.6f, 0.6f, 0))
+        {
+            Debug.Log(wordScore);
+            gameObject.GetComponentInChildren<shrinker>().t = 0f;
+            Destroy(gameObject);
         }
     }
     public void OnMouseDown()
