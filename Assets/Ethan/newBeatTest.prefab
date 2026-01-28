@@ -327,6 +327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3dcfe8956320e44a46dcad19e2f87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 0.75
   t: 0
   parentBeat: {fileID: 4185015934312363960}
+  jsonFile: 

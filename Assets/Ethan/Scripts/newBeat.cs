@@ -5,6 +5,11 @@ public class newBeat : MonoBehaviour
     public GameObject shrinker;
     private string wordScore = "Oops...";
     private int tempScore = 0;
+    private float initialTime;
+    private void Start()
+    {
+        initialTime = Time.time;
+    }
     private void Update()
     {
         //template
@@ -40,6 +45,11 @@ public class newBeat : MonoBehaviour
             wordScore = "Oops...";
             tempScore = 0;
         }
+        if (shrinker.transform.localScale.x <= .6f)
+        {
+            wordScore = "abysmal...";
+        }
+        Debug.Log(wordScore + (Time.time - initialTime));
 
         if (this.gameObject.transform.localScale == new Vector3(0.6f, 0.6f, 0))
         {

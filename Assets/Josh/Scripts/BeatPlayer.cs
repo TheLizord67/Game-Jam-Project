@@ -24,8 +24,9 @@ public class BeatPlayer : MonoBehaviour
     public int currentEnum = 0;
     public float initialTime;
     public float[] timings;
-    public string[] beats;
     public bool songStarted = false;
+    public devSpawnBeat beatSpawner;
+    public float currentTime;
 
 
 
@@ -34,6 +35,7 @@ public class BeatPlayer : MonoBehaviour
     {
         song = JsonConvert.DeserializeObject<Song>(songFile.text);
         timings = song.beatTiming.Keys.ToArray();
+        startSong();
     }
 
     void startSong()
@@ -48,10 +50,11 @@ public class BeatPlayer : MonoBehaviour
     {
         if (songStarted)
         {
+            currentTime = Time.time;
             //                             beat transformed to seconds
-            if (Time.time - initialTime >= 60 * (currentBeat - 1)/song.BPM)
+            if (Time.time - initialTime >= 60 * (currentBeat - 1) / song.BPM)
             {
-                if (song.beatTiming[currentBeat] == "1") spawnBeat();
+                if (song.beatTiming[currentBeat] == "1") beatSpawner.spawnBeat();
                 currentEnum++;
                 try
                 {
@@ -63,9 +66,5 @@ public class BeatPlayer : MonoBehaviour
             }
         }
     }
-
-    void spawnBeat()
-    {
-
-    }
 }
+
