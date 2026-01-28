@@ -6809,7 +6809,7 @@ MonoBehaviour:
   isTransition: 0
   vinylAnimator: {fileID: 840805127}
   uiButton: {fileID: 840805128}
-  songScene: Progress Scene
+  songScene: Song Screen
   vinylWind: {fileID: 755578688}
   vinylLeave: {fileID: 1586556830}
   vinylBack: {fileID: 251196427}

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Public Items/Scenes/Title Screen.unity
     guid: c48028bebc55b914688737c6e42fe595
   - enabled: 1
+    path: Assets/Public Items/Scenes/Song Screen.unity
+    guid: 13f4c9a4d09fe86478718cdf9a4ffc30
+  - enabled: 0
     path: Assets/Toby/Scenes/Progress Scene.unity
     guid: 80690f5efad3f7545901ebcdb34a7f07
   - enabled: 0
