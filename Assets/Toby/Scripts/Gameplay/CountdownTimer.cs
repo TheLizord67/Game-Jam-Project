@@ -26,6 +26,8 @@ public class CountdownTimer : MonoBehaviour
         countdownText.text = "3";
         numberAnimator.Play("CountdownTimer");
         StartCoroutine(Two());
+        StartCoroutine(SongStart());
+        
     }
 
     // Update is called once per frame
@@ -34,6 +36,11 @@ public class CountdownTimer : MonoBehaviour
       
     }
 
+    public IEnumerator SongStart()
+    {
+        yield return new WaitForSeconds(timeBetweenNumbers * 4 - timeBetweenNumbers * 2 / Score.difficulty);
+        beatPlayerRef.startSong();
+    }
     public IEnumerator Two()
     {
         yield return new WaitForSeconds(timeBetweenNumbers);
@@ -61,9 +68,7 @@ public class CountdownTimer : MonoBehaviour
     }
     public IEnumerator CountdownTurnOff()
     {
-        yield return new WaitForSeconds(timeBetweenNumbers / 3);
-        beatPlayerRef.startSong();
-        yield return new WaitForSeconds(timeBetweenNumbers * 2 / 3);
+        yield return new WaitForSeconds(timeBetweenNumbers);
         countdownObject.SetActive(false);
         foreach (GameObject activate in whatToActivate)
         {

@@ -26727,8 +26727,8 @@ MonoBehaviour:
   - {fileID: 1459444128}
   countdownObject: {fileID: 1868753342}
   numberAnimator: {fileID: 1767102037}
-  countdownTime: 3
-  timeBetweemNumbers: 1
+  countdownTime: 0
+  timeBetweenNumbers: 0
   countdownText: {fileID: 1767102036}
   countdownOne: {fileID: 1064097793}
   countdownTwo: {fileID: 799681218}
