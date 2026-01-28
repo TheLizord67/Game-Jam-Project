@@ -49,7 +49,6 @@ public class newBeat : MonoBehaviour
         {
             wordScore = "abysmal...";
         }
-        Debug.Log(wordScore + (Time.time - initialTime));
 
         if (this.gameObject.transform.localScale == new Vector3(0.6f, 0.6f, 0))
         {
