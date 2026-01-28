@@ -6,6 +6,12 @@ public class newBeat : MonoBehaviour
     private string wordScore = "Oops...";
     private int tempScore = 0;
     private float initialTime;
+
+    public GameObject perfect;
+    public GameObject good;
+    public GameObject yeah;
+    public GameObject oops;
+    public GameObject abysmal;
     private void Start()
     {
         initialTime = Time.time;
@@ -50,15 +56,38 @@ public class newBeat : MonoBehaviour
             wordScore = "abysmal...";
             Debug.Log(wordScore);
             gameObject.GetComponentInChildren<shrinker>().t = 0f;
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
 
     }
     public void OnMouseDown()
     {
-        Debug.Log(wordScore);
-        Score.score += tempScore * 10;
-        gameObject.GetComponentInChildren<shrinker>().t = 0;
-        Destroy(gameObject);
+        if (shrinker.transform.localScale.x <= 2)
+        {
+            Debug.Log(wordScore);
+            Score.score += tempScore * 10;
+            if(wordScore == "Good!")
+            {
+                Instantiate(good, transform.position, Quaternion.identity);
+            }
+            if(wordScore == "Perfect!")
+            {
+                Instantiate(perfect, transform.position, Quaternion.identity);
+            }
+            if(wordScore == "Yeah!")
+            {
+                Instantiate(yeah, transform.position, Quaternion.identity);
+            }
+            if(wordScore == "Oops...")
+            {
+                Instantiate(oops, transform.position, Quaternion.identity);
+            }
+            if(wordScore == "abysmal...")
+            {
+                Instantiate(abysmal, transform.position, Quaternion.identity);
+            }
+            gameObject.GetComponentInChildren<shrinker>().t = 0;
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0.5018902, b: 0.5849056, a: 1}
   m_FlipX: 0
@@ -236,6 +236,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrinker: {fileID: 6197452365646427585}
+  perfect: {fileID: 2919429252924666629, guid: 3e6d85b41284b7a4c80ed196601d8f3d, type: 3}
+  good: {fileID: 146858840219726641, guid: 5c7bb9c5e41ea1448a9fcd2f290f99c9, type: 3}
+  yeah: {fileID: 1232380167610865737, guid: 037ab846dd12d2342a1dd697ca00fd58, type: 3}
+  oops: {fileID: 3745999138665416276, guid: fa7115e4cdfb6bf4fbbc9f56189f76cd, type: 3}
+  abysmal: {fileID: 146858840219726641, guid: 66b3496027d2189479ceb2492a6517c1, type: 3}
 --- !u!1 &6197452365646427585
 GameObject:
   m_ObjectHideFlags: 0

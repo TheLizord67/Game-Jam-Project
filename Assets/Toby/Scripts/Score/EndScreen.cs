@@ -26,7 +26,7 @@ public class EndScreen : MonoBehaviour
         {
             fade.Play();
         }
-        finalScore += 1;
+        finalScore += 10;
         if (finalScore > Score.score)
         {
             Debug.Log("New High Score!");
