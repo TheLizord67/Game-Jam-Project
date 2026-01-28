@@ -8,42 +8,52 @@ using System.Linq;
 public class SoundSettings : MonoBehaviour
 {
     [SerializeField] private Slider soundSlider;
-    [SerializeField] private AudioMixer masterMixer;
+    [SerializeField] private AudioMixer myMixer;
+    [SerializeField] private string volumeParameter;
     [SerializeField] private List<Sprite> soundImages;
     [SerializeField] private Image soundImage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        SetVolume(PlayerPrefs.GetFloat("SavedMasterVolume", 100f));
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            LoadVolume();
+        }
+        else
+        {
+            SetVolume();
+        }
     }
 
-    public void SetVolume(float volume)
+    public void SetVolume()
     {
-        if (volume < 1)
-        {
-            volume = .001f;
-        }
+        float volume = soundSlider.value;
+        myMixer.SetFloat(volumeParameter, Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+    }
 
-        RefreshSlider(volume);
-        PlayerPrefs.SetFloat("SavedMasterVolume", volume);
-        masterMixer.SetFloat("MasterVolume", Mathf.Log10(volume / 100) * 20);
+    private void LoadVolume()
+    {
+        soundSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+
+        SetVolume();
     }
 
     public void ChangeImage()
     {
-        if (soundSlider.value == .001f)
+        if (soundSlider.value == 0)
         {
             soundImage.sprite = soundImages[0];
         }
-        else if (soundSlider.value > .001f && soundSlider.value <= 33f)
+        else if (soundSlider.value > .001f && soundSlider.value <= 0.33f)
         {
             soundImage.sprite = soundImages[1];
         }
-        else if (soundSlider.value > 33f && soundSlider.value <= 66f)
+        else if (soundSlider.value > 0.33f && soundSlider.value <= 0.66f)
         {
             soundImage.sprite = soundImages[2];
         }
-        else if (soundSlider.value > 66f)
+        else if (soundSlider.value > 0.66f)
         {
             soundImage.sprite = soundImages[3];
         }
@@ -51,15 +61,6 @@ public class SoundSettings : MonoBehaviour
         {
             Debug.Log("No image");
         }
-    }
-    public void SetVolumeFromSlider()
-    {
-        SetVolume(soundSlider.value);
-    }
-
-    private void RefreshSlider(float volume)
-    {
-        soundSlider.value = volume;
     }
 
     public void Update()
