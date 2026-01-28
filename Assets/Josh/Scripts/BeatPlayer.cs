@@ -35,10 +35,9 @@ public class BeatPlayer : MonoBehaviour
     {
         song = JsonConvert.DeserializeObject<Song>(songFile.text);
         timings = song.beatTiming.Keys.ToArray();
-        startSong();
     }
 
-    void startSong()
+    public void startSong()
     {
         initialTime = Time.time;
         songStarted = true;

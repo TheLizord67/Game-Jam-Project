@@ -15,8 +15,10 @@ public class devSpawnBeat : MonoBehaviour
     }
     public void spawnBeat()
     {
-        
-        Instantiate(prefab, new Vector3(Random.Range(-8f, 8f), Random.Range(-3f, 5f), 0), transform.rotation);
-        
+
+
+        Instantiate(prefab, new Vector3(Random.Range(-7f, 7f), Random.Range(-2f, 3f), 670), transform.rotation);
+
+
     }
 }

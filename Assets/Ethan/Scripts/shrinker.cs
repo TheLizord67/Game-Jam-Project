@@ -29,7 +29,7 @@ public class shrinker : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        jsonFile = System.IO.File.ReadAllText(Application.dataPath + "/Josh/level files/text.json");
+        jsonFile = System.IO.File.ReadAllText(Application.dataPath + "/Josh/level files/rock.json");
         song = JsonConvert.DeserializeObject<Song>(jsonFile);
         this.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
         initialTime = Time.time;

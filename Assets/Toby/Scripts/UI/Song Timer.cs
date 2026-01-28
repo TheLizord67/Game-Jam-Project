@@ -54,7 +54,7 @@ public class SongTimer : MonoBehaviour
                     SwitchToGuitar(); 
                     whatToSwitch.RemoveAt(index);
                 }
-
+                break;
             }
             else
             {
