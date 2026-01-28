@@ -15,7 +15,6 @@ public class TimeSlow : MonoBehaviour
     [SerializeField] private float slowDurationTimer;
 
     [SerializeField] private Image slowFill;
-    [SerializeField] private float slowFillAmount;
     [SerializeField] public Color cooldownColor;
     [SerializeField] public Color ready;
     [SerializeField] public Color reload;
@@ -27,7 +26,6 @@ public class TimeSlow : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        slowFillAmount =
         slowCooldownTimer = slowCooldown;
         slowDurationTimer = slowDuration;
     }
@@ -45,7 +43,7 @@ public class TimeSlow : MonoBehaviour
         {
             slowFill.color = cooldownColor;
             slowCooldownTimer -= Time.deltaTime;
-            slowFill.fillAmount -= 0.1f;
+            slowFill.fillAmount -= Time.deltaTime / slowCooldown;
         }
         
         else if (slowCooldownTimer <= 0)
@@ -61,12 +59,17 @@ public class TimeSlow : MonoBehaviour
                     normalTime = 1;
                 }
                 slowDurationTimer -= normalTime;
-                slowFill.fillAmount -= 0.1f;
+                if (slowFill.fillAmount <= 0)
+                {
+                    slowFill.fillAmount = 1;
+                }
+                slowFill.fillAmount -= Time.deltaTime / slowDuration;
             }
 
             if (Input.GetKey(slowKey) == false)
             {
                 Time.timeScale = 1f;
+               
             }
             
             if (slowDurationTimer <= 0)
@@ -83,7 +86,7 @@ public class TimeSlow : MonoBehaviour
         {
             slowFill.color = reload;
             slowCooldownTimer += Time.deltaTime;
-            slowFill.fillAmount -= 0.1f * (Time.deltaTime / slowCooldown);
+            slowFill.fillAmount += Time.deltaTime / slowCooldown;
             if (slowCooldownTimer >= slowCooldown)
             {
                 startCooldown = true;
