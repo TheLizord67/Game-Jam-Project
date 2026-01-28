@@ -57,7 +57,7 @@ public class newBeat : MonoBehaviour
     public void OnMouseDown()
     {
         Debug.Log(wordScore);
-        Score.score += tempScore * 100;
+        Score.score += tempScore * 10;
         gameObject.GetComponentInChildren<shrinker>().t = 0;
         Destroy(gameObject);
     }
