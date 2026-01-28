@@ -85,8 +85,8 @@ public class TimeSlow : MonoBehaviour
         else if (startCooldown == false)
         {
             slowFill.color = reload;
-            slowCooldownTimer += Time.deltaTime;
-            slowFill.fillAmount += Time.deltaTime / slowCooldown;
+            slowCooldownTimer += Time.deltaTime * 2;
+            slowFill.fillAmount += (Time.deltaTime * 2) / slowCooldown;
             if (slowCooldownTimer >= slowCooldown)
             {
                 startCooldown = true;

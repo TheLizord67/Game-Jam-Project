@@ -7,6 +7,7 @@ using UnityEngine;
 public class CountdownTimer : MonoBehaviour
 {
     [SerializeField] private List<GameObject> whatToActivate;
+    [SerializeField] private GameObject countdownObject;
     [SerializeField] private Animator numberAnimator;
     [SerializeField] private float countdownTime = 3f;
     [SerializeField] private float timeBetweemNumbers;
@@ -58,7 +59,7 @@ public class CountdownTimer : MonoBehaviour
     public IEnumerator CountdownTurnOff()
     {
         yield return new WaitForSeconds(timeBetweemNumbers);
-        countdownText.gameObject.SetActive(false);
+        countdownObject.SetActive(false);
         foreach (GameObject activate in whatToActivate)
         {
             activate.SetActive(true);

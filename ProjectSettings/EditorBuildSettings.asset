@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Toby/Scenes/Title Screen.unity
+    path: Assets/Public Items/Scenes/Title Screen.unity
     guid: c48028bebc55b914688737c6e42fe595
   - enabled: 1
     path: Assets/Toby/Scenes/Progress Scene.unity

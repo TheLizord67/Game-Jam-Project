@@ -69,15 +69,15 @@ public class SongTimer : MonoBehaviour
     }
     public void SwitchToGuitar()
     {
-        guitarObject.SetActive(true);
-        drumObject.SetActive(false);
+        //guitarObject.SetActive(true);
+        //drumObject.SetActive(false);
         //Do Switching stuff
     }
     
     public void SwitchToDrums()
     {
-        guitarObject.SetActive(false);
-        drumObject.SetActive(true);
+        //guitarObject.SetActive(false);
+        //drumObject.SetActive(true);
         //Do Switching stuff
     }
 
