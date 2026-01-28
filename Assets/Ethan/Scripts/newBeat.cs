@@ -48,14 +48,11 @@ public class newBeat : MonoBehaviour
         if (shrinker.transform.localScale.x <= .6f)
         {
             wordScore = "abysmal...";
-        }
-
-        if (this.gameObject.transform.localScale == new Vector3(0.6f, 0.6f, 0))
-        {
             Debug.Log(wordScore);
             gameObject.GetComponentInChildren<shrinker>().t = 0f;
             Destroy(gameObject);
         }
+
     }
     public void OnMouseDown()
     {

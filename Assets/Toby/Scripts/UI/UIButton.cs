@@ -52,11 +52,11 @@ public class UIButton : MonoBehaviour
 
     public void Easy()
     {
-       Score.difficulty = 1f;
+       Score.difficulty = 1.5f;
     }
     public void Normal()
     {
-        Score.difficulty = 1.5f;
+        Score.difficulty = 1.75f;
     }
     public void Hard()
     {
