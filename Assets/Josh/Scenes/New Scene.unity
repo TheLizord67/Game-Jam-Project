@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 12139935}
   - component: {fileID: 12139934}
   - component: {fileID: 12139933}
-  - component: {fileID: 12139932}
+  - component: {fileID: 12139937}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -139,20 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &12139932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12139931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b187ab83e3085164f98d688ac7a85c3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tick: 0
-  songFile: {fileID: 0}
 --- !u!135 &12139933
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -242,6 +228,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &12139937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12139931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b667d652cc6a06d47b1e9992d5202c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFile: {fileID: 4900000, guid: 73b96368aa0eff343b23f363a677f56e, type: 3}
+  song:
+    BPM: 0
+    timeSig: 
 --- !u!1 &226098725
 GameObject:
   m_ObjectHideFlags: 0
