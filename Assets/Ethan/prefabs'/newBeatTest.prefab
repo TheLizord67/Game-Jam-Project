@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 927b054fb15c1a647b6959c1ad210451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrinker: {fileID: 6197452365646427585}
+  shrinker: {fileID: 1840663544938462593}
   perfect: {fileID: 2919429252924666629, guid: 3e6d85b41284b7a4c80ed196601d8f3d, type: 3}
   good: {fileID: 146858840219726641, guid: 5c7bb9c5e41ea1448a9fcd2f290f99c9, type: 3}
   yeah: {fileID: 1232380167610865737, guid: 037ab846dd12d2342a1dd697ca00fd58, type: 3}
@@ -341,6 +341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3dcfe8956320e44a46dcad19e2f87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t: 0
+  t: 0.5
   parentBeat: {fileID: 4185015934312363960}
   jsonFile: 

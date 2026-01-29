@@ -2,21 +2,18 @@
 
 public class newBeat : MonoBehaviour
 {
-    public GameObject shrinker;
+    public shrinker shrinker;
     private string wordScore = "Oops...";
     private int tempScore = 0;
-    private float initialTime;
 
     public GameObject perfect;
     public GameObject good;
     public GameObject yeah;
     public GameObject oops;
     public GameObject abysmal;
-    private void Start()
-    {
-        initialTime = Time.time;
-    }
-    private void Update()
+    public float initialTime;
+
+    private void FixedUpdate()
     {
         //template
         //if (shrinker.transform.localScale == )
@@ -31,12 +28,17 @@ public class newBeat : MonoBehaviour
         //        =<.6 = Oops...
         //    */
         //}
+        if (shrinker.transform.localScale.x > 1.36f)
+        {
+            wordScore = "Oops...";
+            tempScore = 0;
+        }
         if (shrinker.transform.localScale.x <= 1.36f)
         {
             wordScore = "Good!";
             tempScore = 1;
         }
-        if (shrinker.transform.localScale.x <= 1.1f)
+        if (shrinker.transform.localScale.x <= 1f)
         {
             wordScore = "Perfect!";
             tempScore = 3;
@@ -55,6 +57,7 @@ public class newBeat : MonoBehaviour
         {
             wordScore = "abysmal...";
             Debug.Log(wordScore);
+            Instantiate(abysmal, transform.position, Quaternion.identity);
             gameObject.GetComponentInChildren<shrinker>().t = 0f;
             Destroy(this.gameObject);
         }
