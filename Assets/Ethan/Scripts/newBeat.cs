@@ -55,7 +55,7 @@ public class newBeat : MonoBehaviour
             wordScore = "Good!";
             tempScore = 1;
         }
-        if (shrinker.transform.localScale.x <= 1f)
+        if (shrinker.transform.localScale.x <= 1.1f)
         {
             wordScore = "Perfect!";
             tempScore = 3;

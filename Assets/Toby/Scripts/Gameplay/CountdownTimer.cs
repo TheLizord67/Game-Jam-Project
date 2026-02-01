@@ -38,7 +38,7 @@ public class CountdownTimer : MonoBehaviour
 
     public IEnumerator SongStart()
     {
-        yield return new WaitForSeconds(timeBetweenNumbers * 4 - timeBetweenNumbers * 2 / Score.difficulty);
+        yield return new WaitForSeconds(timeBetweenNumbers * 4 - timeBetweenNumbers * (5/3) / Score.difficulty);
         beatPlayerRef.startSong();
     }
     public IEnumerator Two()
