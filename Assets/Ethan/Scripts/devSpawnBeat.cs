@@ -22,7 +22,7 @@ public class devSpawnBeat : MonoBehaviour
     {
 
 
-        GameObject nextBeat = Instantiate(prefab, new Vector3(Random.Range(-7f, 7f), Random.Range(-2f, 3f), 670), transform.rotation);
+        GameObject nextBeat = Instantiate(prefab, new Vector3(Random.Range(-6f, 6f), Random.Range(-2f, 3f), 670), transform.rotation);
         beats.Add(nextBeat);
         intersecting = true;
         while (intersecting)
@@ -34,7 +34,7 @@ public class devSpawnBeat : MonoBehaviour
                 {
                     if (beat.GetComponent<CircleCollider2D>().IsTouching(nextBeat.GetComponent<CircleCollider2D>()) && beat != nextBeat)
                     {
-                        nextBeat.transform.position = new Vector3(Random.Range(-7f, 7f), Random.Range(-2f, 3f), 670);
+                        nextBeat.transform.position = new Vector3(Random.Range(-6f, 6f), Random.Range(-2f, 3f), 670);
                         intersecting = true;
                     }
                 }
