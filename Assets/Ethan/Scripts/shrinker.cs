@@ -44,8 +44,8 @@ public class shrinker : MonoBehaviour
         // it takes 4 beats for the shrinker to go from 3 to .6 with difficulty 1
         // therefore the shrinker should be spawned in 10/3 beats before it must be clicked, with difficulty 1
         // (10/3)/difficulty for how long before the beat to spawn it in
-
-        //this.gameObject.transform.localScale = new Vector3(Mathf.Lerp(max, min, t), Mathf.Lerp(max, min, t), 0);
+        t = Score.difficulty * initialTime - Time.time * 60 / 140;
+        this.gameObject.transform.localScale = new Vector3(Mathf.Lerp(max, min, t), Mathf.Lerp(max, min, t), 0);
     }
 
     public IEnumerator Shrink()

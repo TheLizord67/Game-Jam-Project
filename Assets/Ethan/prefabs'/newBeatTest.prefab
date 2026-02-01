@@ -235,12 +235,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 927b054fb15c1a647b6959c1ad210451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrinker: {fileID: 1840663544938462593}
+  shrinker: {fileID: 6197452365646427585}
   perfect: {fileID: 2919429252924666629, guid: 3e6d85b41284b7a4c80ed196601d8f3d, type: 3}
   good: {fileID: 146858840219726641, guid: 5c7bb9c5e41ea1448a9fcd2f290f99c9, type: 3}
   yeah: {fileID: 1232380167610865737, guid: 037ab846dd12d2342a1dd697ca00fd58, type: 3}
   oops: {fileID: 3745999138665416276, guid: fa7115e4cdfb6bf4fbbc9f56189f76cd, type: 3}
   abysmal: {fileID: 146858840219726641, guid: 66b3496027d2189479ceb2492a6517c1, type: 3}
+  initialTime: 0
 --- !u!1 &6197452365646427585
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +252,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2894269731002539842}
   - component: {fileID: 4069877723244927626}
-  - component: {fileID: 1840663544938462593}
   m_Layer: 0
   m_Name: shrinker
   m_TagString: Untagged
@@ -329,18 +329,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1840663544938462593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6197452365646427585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3dcfe8956320e44a46dcad19e2f87e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  t: 0.5
-  parentBeat: {fileID: 4185015934312363960}
-  jsonFile: 

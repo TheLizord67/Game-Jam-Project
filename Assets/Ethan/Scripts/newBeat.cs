@@ -2,7 +2,7 @@
 
 public class newBeat : MonoBehaviour
 {
-    public shrinker shrinker;
+    public GameObject shrinker;
     private string wordScore = "Oops...";
     private int tempScore = 0;
 
@@ -13,6 +13,16 @@ public class newBeat : MonoBehaviour
     public GameObject abysmal;
     public float initialTime;
 
+
+    public float t = 0.0f;
+    private float min = 0.6f;
+    private float max = 3f;
+
+
+    private void Start()
+    {
+        initialTime = Time.time;
+    }
     private void FixedUpdate()
     {
         //template
@@ -28,6 +38,13 @@ public class newBeat : MonoBehaviour
         //        =<.6 = Oops...
         //    */
         //}
+
+
+        t = Score.difficulty * (Time.time - initialTime) * 60 / 140;
+
+        shrinker.transform.localScale = new Vector3(Mathf.Lerp(max, min, t), Mathf.Lerp(max, min, t), 0);
+        Debug.Log(t + " " + shrinker.transform.localScale.x);
+
         if (shrinker.transform.localScale.x > 1.36f)
         {
             wordScore = "Oops...";
@@ -58,7 +75,7 @@ public class newBeat : MonoBehaviour
             wordScore = "abysmal...";
             Debug.Log(wordScore);
             Instantiate(abysmal, transform.position, Quaternion.identity);
-            gameObject.GetComponentInChildren<shrinker>().t = 0f;
+            t = 0f;
             Destroy(this.gameObject);
         }
 
@@ -89,7 +106,7 @@ public class newBeat : MonoBehaviour
             {
                 Instantiate(abysmal, transform.position, Quaternion.identity);
             }
-            gameObject.GetComponentInChildren<shrinker>().t = 0;
+            t = 0;
             Destroy(this.gameObject);
         }
     }
