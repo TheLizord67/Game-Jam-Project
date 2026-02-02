@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SaveDataController : MonoBehaviour
@@ -15,7 +13,6 @@ public class SaveDataController : MonoBehaviour
     private SaveData _currentData;
     public ref SaveData CurrentData => ref _currentData;
 
-    public GameObject tutorial;
     public void Awake()
     {
         Instance = this;
